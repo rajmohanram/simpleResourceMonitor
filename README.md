@@ -16,7 +16,10 @@
 		- Unavailable endpoints
 			- Endpoint friendly name
 			- Red Indication
-
+### Download minimal Apline VM
+- Django appliation served with Apache + mod_wsgi
+- Loaded on latest Apline VM
+- Download the VM from [here](https://drive.google.com/file/d/1hiZpedSKqt6-eEe372Ok9LzYCB6rf63c/view?usp=sharing)
 ### Test the code
 - Clone this repository
 ` git clone https://github.com/rajmohanram/simpleResourceMonitor.git`
