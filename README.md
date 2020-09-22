@@ -16,3 +16,23 @@
 		- Unavailable endpoints
 			- Endpoint friendly name
 			- Red Indication
+
+### Test the code
+- Clone this repository
+` git clone https://github.com/rajmohanram/simpleResourceMonitor.git`
+- Create a python virutal environment
+- Install dependencies from requirements.txt
+`pip install -r requirements.txt`
+- Initialize the app
+    ```
+    python manage.py makemigrations
+    python manage.py migrate
+- Create a superuser
+    ```
+    python manage.py createsuperuser
+    ```
+ - Run the application
+    ```
+    python manage.py runserver
+    ```
+ - The app will be available at `http://127.0.0.1:800`
