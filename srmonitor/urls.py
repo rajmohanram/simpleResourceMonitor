@@ -19,12 +19,14 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='home')
+    path('', views.home, name='home'),
+    path('login/', views.login, name='login'),
+
 ]
 
 # urlpatterns for usermgmt app
 urlpatterns += [
-    path('login/', include('usermgmt.urls')),
+    path('srm/', include('sradmin.urls')),
 ]
 
 # urlpatterns for monitorhttp app

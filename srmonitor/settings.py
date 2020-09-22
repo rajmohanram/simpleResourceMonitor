@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'usermgmt.apps.UsermgmtConfig',
+    'sradmin.apps.SradminConfig',
     'monitorhttp.apps.MonitorhttpConfig'
 ]
 
@@ -124,3 +124,5 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, 'static'),
 ]
+
+LOGIN_URL = "/login/"

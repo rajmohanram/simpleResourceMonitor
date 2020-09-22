@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+{% block title %}<title>SRM | mWeb</title>{% endblock %}
+{% block content %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+          <div class="row mb-2">
+            <div class="col-sm-6">
+              <h1 class="lead">Website Monitoring</h1>
+            </div>
+            <div class="col-sm-6">
+              <ol class="breadcrumb float-sm-right">
+                <li class="breadcrumb-item mr-2">Your IP Address</li>
+                <li class="breadcrumb-item text-danger">{{ client_ip }}</li>
+              </ol>
+            </div>
+          </div>
+        </div><!-- /.container-fluid -->
+      </section>
+  
+      <!-- Main content -->
+      <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="float-right">
+                    <i class="far fa-clock mr-1" style="font-size: 20px; color: black;">
+                      <span id="reachable_updated" class="lead text-md text-muted"></span>
+                    </i>
+                  </div>
+                    <h6 class="text-muted m-0">
+                      <span class="mr-4 text-muted">Reachable sites</span>
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <table id="reachable" class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th>Website</th>
+                          <th>RTT (ms)</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dummy site</td>
+                          <td>100</td>
+                          <td><i id="check-status" class="far fa-arrow-alt-circle-up" style="font-size: 24px; color: green;"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-6">
+              <div class="card">
+                <div class="card-header">
+                  <div class="float-right">
+                    <i class="far fa-clock mr-1" style="font-size: 20px; color: black;">
+                      <span id="unreachable_updated" class="lead text-md text-muted"></span>
+                    </i>
+                  </div>
+                    <h6 class="text-muted m-0">
+                      <span class="mr-4 text-muted">Unreachable sites</span>
+                    </h6>
+                </div>
+                <div class="card-body">
+                    <table id="unreachable" class="table table-bordered table-hover">
+                      <thead>
+                        <tr>
+                          <th>Website</th>
+                          <th>Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Dummy site</td>
+                          <td><i id="check-status" class="far fa-arrow-alt-circle-down" style="font-size: 24px; color: red;"></i></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                </div>
+                </div>
+                <!-- /.card -->
+            </div>
+            <!-- /.col -->
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container-fluid -->
+      </section>
+{% endblock %}
+{% block page-scripts %}
+    {% load static %}
+    <script src="{% static 'dist/js/pages/endpoint.status.js' %}"></script>
+{% endblock %}
