@@ -20,7 +20,7 @@
 ### Test the code
 - Clone this repository
 ` git clone https://github.com/rajmohanram/simpleResourceMonitor.git`
-- Create a python virutal environment
+- Create a python virtual environment
 - Install dependencies from requirements.txt
 `pip install -r requirements.txt`
 - Initialize the app
